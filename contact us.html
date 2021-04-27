@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <meta name="author" content="tishara">
+        <meta name="author" content="BMTM Basnayaka">
         <title>Contact Us</title>
     </head>
     <body>
@@ -27,54 +28,30 @@
                 Register: <a href="#">As Patient</a> | <a href="#">As Doctor</a>
             </nav>
         </header>
-       <center><h1>Contact Us </h1></center>
-       <center><p>We are more than willing help out any of our<br>
-        users who are having trouble acquiring our<br>
-        service. Our team is always at the ready to<br>
-        provide a quick response.</p></center>
-
-        <div>
+        <section>
+       <h1>Contact Us </h1>
+            <p>
+                We are more than willing help out any of our users who are having trouble acquiring our service. Our team is always at the ready to provide a quick response.
+            </p>
+        </section>
+        <section>
             <form >
-                <table style="width:100%;max-width:550px;border:0;" cellpadding="8" cellspacing="0">
-                    <tr>
-                         <td>
-                            <label for="Name">Name*:</label>
-                        </td>
-                         <td>
-                             <input name="Name" type="text" maxlength="60" style="width:100%;max-width:250px;" />
-                        </td> 
-                    </tr> 
-                    <tr> 
-                        <td>
-                            <label for="PhoneNumber">Phone number:</label>
-                        </td>
-                         <td>
-                             <input name="PhoneNumber" type="text" maxlength="43" style="width:100%;max-width:250px;" />
-                        </td> 
-                    </tr> 
-                    <tr>
-                         <td>
-                             <label for="FromEmailAddress">Email address*:</label>
-                        </td>
-                         <td>
-                             <input name="FromEmailAddress" type="text" maxlength="90" style="width:100%;max-width:250px;" />
-                        </td> 
-                    </tr>
-                    <tr> 
-                        <td>
-                             <label for="Comments">Comments*:</label>
-                        </td> 
-                        <td>
-                             <textarea name="Comments" rows="7" cols="40" style="width:100%;max-width:350px;"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="button" value="Send">
-                        </td>
-                    </tr>
-                </table>
+                <select>
+                    <option>English</option>
+                    <option>Sinhala</option>
+                    <option>Tamil</option>
+                </select><br>
+                Name:
+                <input name="Name" type="text" maxlength="60"><br>
+                Phone number:
+                <input name="PhoneNumber" type="password" maxlength="43"><br>
+                Email address:
+                <input name="FromEmailAddress" type="email" maxlength="90"><br>
+                Subject:
+                <input name="Subject" type="text" maxlength="60"><br>
+                <textarea name="Comments" placeholder="Write your e-mail here..."></textarea><br>
+                <input type="submit" value="Send">
             </form>
-        </div>
+        </section>
     </body>
 </html>
