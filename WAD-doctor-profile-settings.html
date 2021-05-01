@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="" content="">
+        <meta name="" content="">
+        <title>Doctor profile settings</title>
+    </head>
+    <body>
+        <div id="nav">
+            <!--nav with logo and browse option-->
+            <ul>
+                <li><a href="#"><img src="images/logo.jpg" alt="logo"> </a></li>
+                <li><a href="#"><img src="images/frown.jpg" alt="browse"> </a></li>
+            </ul>
+        </div>
+        <div id="profile">
+            <!--details of the doctor-->
+            <h1>Profile Settings</h1>
+            <form>
+                <h4>Personal Information</h4><br>
+                Name <input type="text" placeholder="John Smith"><br>
+                Email <input type="email" placeholder="Johnsmith@gmail.com"><br>
+                <h4>Account Security</h4><br>
+                Current Password <input type="password" placeholder="Aa#"><br>
+                New Password <input type="password" placeholder="Aa#"><br>
+                Re-enter New password<input type="password" placeholder="Aa#"><br>
+                <h4>Professional Information</h4>
+                Specialization <input type="text" placeholder="Specialization"><br>
+                license <input type="text" placeholder="License NUmber"><br>
+            </form>
+            <div id="mid">
+                <!--details of the workplaces-->
+                <h2>Workplaces</h2><br>
+                <form>
+                    Workplace Name<input type="text"> &nbsp; 
+                    Workplace Type
+                        <select>
+                            <option>01</option>
+                            <option>02</option>
+                        </select><br>
+                    Workplace Coordinates<input type="text"> &nbsp;
+                    city
+                        <select>
+                            <option>I</option>
+                            <option>II</option>
+                        </select><br>
+                    <input type="submit" value="Add record"><br>
+                    <div>
+                        Coordinate Generator
+                    </div><br>
+                    Coordinates: <input type="text"><br>
+                    <table border="1px solid black">
+                        <tr>
+                            <th>Workplace Name</th>
+                            <th>Workplace Type</th>
+                            <th>City</th>
+                            <th>Workplace Coordinates</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="--"></td>
+                            <td><input type="text" placeholder="--"></td>
+                            <td><input type="text" placeholder="--"></td>
+                            <td><input type="text" placeholder="--"></td>
+                        </tr>
+                    </table><br>
+                    Record Number <input type="number">
+                    <button>Delete Record</button><br>
+                </form>
+            </div>
+            <div id="botm">
+                <!--Details of work hours-->
+                <h2>Work Hours</h2><br>
+                <form>
+                    Workplace Name<br>
+                    <select>
+                        <option>001</option>
+                        <option>002</option>
+                    </select><br>
+                    Day
+                    <select>
+                        <option>001i</option>
+                        <option>002i</option>
+                    </select>&nbsp;
+                    Start Time
+                    <select>
+                        <option>001ii</option>
+                        <option>002ii</option>
+                    </select>&nbsp;
+                    End Time
+                    <select>
+                        <option>001iii</option>
+                        <option>002iii</option>
+                    </select>&nbsp;
+                    <input type="submit" value="Add Record"><br>
+                    <table border="1px solid black">
+                        <tr>
+                            <th>Workplace Name</th>
+                            <th>Day</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="--"></td>
+                            <td><input type="text" placeholder="--"></td>
+                            <td><input type="time" placeholder="--"></td>
+                            <td><input type="time" placeholder="--"></td>
+                        </tr>
+                    </table><br>
+                    Record Number <input type="number">
+                    <button>Delete Record</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
