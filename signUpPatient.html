@@ -4,20 +4,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <meta name="author" content="IU Ratnayake">
-        <title>Doctorr | Patient | Sign-In</title>
+        <title>Patient | Sign-In</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <script src="js/bootstrap.min.js"></script>
-        <style>
-            .body-section {
-                height: 100vh;
-            }
-            .control-height {
-                height: 3.5rem;
-            }
-            header h1 {
-                font-size: 2.3rem;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="signUpPatients-styles.css">
     </head>
     <body">
         <div class="row my-4 align-items-center body-section">
@@ -39,18 +29,18 @@
                                     </div>
                                 </div>
                                 <!-- Gender -->
-                                <div class="row mb-2 p-2 control-height align-items-center">
-                                    <div class="col">
+                                <div class="row p-1 mb-2 control-height align-items-center">
+                                    <div class="col-sm-2 col-6">
                                         <label>Gender:</label>
                                     </div>
-                                    <div class="col text-end">
+                                    <div class="col-xl-7 col-md-6 col-sm-5 col-6 text-end">
                                         <span>
-                                            <input type="radio" id="patientGenderMale" class="form-check-input" name="gender"> <label for="patientGenderMale" class="form-check-label">Male</label>
+                                            <label for="patientGenderMale" class="form-check-label">Male</label> <input type="radio" id="patientGenderMale" class="form-check-input" name="gender">
                                         </span>
                                     </div>
-                                    <div class="col text-end">
+                                    <div class="col-xl-3 col-md-4 col-sm-5 col-12 text-end">
                                         <span>
-                                            <input type="radio" id="patientGenderFemale" class="form-check-input" name="gender"> <label for="patientGenderFemale" class="form-check-label">Female</label>
+                                            <label for="patientGenderFemale" class="form-check-label">Female</label> <input type="radio" id="patientGenderFemale" class="form-check-input" name="gender"> 
                                         </span>
                                     </div>
                                 </div>
