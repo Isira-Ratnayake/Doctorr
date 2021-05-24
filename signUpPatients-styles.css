@@ -1,0 +1,12 @@
+body {
+    overflow-x: hidden;
+}
+.body-section {
+    height: 100vh;
+}
+.control-height {
+    height: 3.5rem;
+}
+header h1 {
+    font-size: 2.3rem;
+}
