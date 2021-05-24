@@ -5,31 +5,128 @@
         <meta charset="utf-8">
         <meta name="author" content="IU Ratnayake">
         <title>Patient | Sign-In</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <style>
+            .body-section {
+                height: 100vh;
+            }
+            .control-height {
+                height: 3.5rem;
+            }
+            header h1 {
+                font-size: 2.3rem;
+            }
+        </style>
     </head>
-    <body>
-        <a href="#"><img src="images/logo.jpg"></a>
-        <h1>Sign-Up as a Patient</h1>
-        <form>
-            Name:
-            <input type="text" size="30" placeholder="Your Name"><br>
-            Gender:
-            <input type="radio" name="gender">Male <input type="radio" name="gender">Female<br>
-            E-mail:
-            <input type="email" size="30" placeholder="Your E-mail"><br>
-            Password:
-            <input type="password" size="30" minlength="8" placeholder="Your Password"><br>
-            Re-enter Password:
-            <input type="password" size="30" placeholder="Re-enter Your Password"><br>
-            Address:
-            <input type="text" size="30" placeholder="Address-line 1"><br>
-            <input type="text" size="30" placeholder="Address-line 2 (Optional)"><br>
-            City:
-            <select required>
-                <option value="" disabled selected>Select the Nearest City</option>
-            </select><br>
-            <input type="submit" value="Sign-Up">
-        </form>
-        <p>Already have an account? <a href="#">Sign-In</a></p>
-        <p>Or do you want to enter a doctor? <a href="#">Sign-Up</a> | <a href="#">Sign-In</a></p>
+    <body">
+        <div class="row my-4 align-items-center body-section">
+            <div class="col">
+                <header>
+                    <h1 class="text-center"><img src="images/logo.png" alt="Doctorr Logo"> Sign&hybull;Up&nbsp;as&nbsp;a&nbsp;Patient</h1>
+                </header>
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col col-lg-5 col-md-6 col-sm-8 col-10">
+                            <form class="container-fluid border rounded-3 pt-5 pb-4 bg-light">
+                                <!-- Name -->
+                                <div class="row mb-2">
+                                    <div class="col col-12">
+                                        <div class="form-floating">
+                                            <input type="text" id="patientName" class="form-control" size="30" placeholder="Your Name" required>
+                                            <label for="patientName">Name:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Gender -->
+                                <div class="row mb-2 p-2 control-height align-items-center">
+                                    <div class="col">
+                                        <label>Gender:</label>
+                                    </div>
+                                    <div class="col text-end">
+                                        <span>
+                                            <input type="radio" id="patientGenderMale" class="form-check-input" name="gender"> <label for="patientGenderMale" class="form-check-label">Male</label>
+                                        </span>
+                                    </div>
+                                    <div class="col text-end">
+                                        <span>
+                                            <input type="radio" id="patientGenderFemale" class="form-check-input" name="gender"> <label for="patientGenderFemale" class="form-check-label">Female</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="email" id="patientEmail" class="form-control" size="30" placeholder="Your E-mail" required>
+                                            <label for="patientEmail">E-mail:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!-- Password -->
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <div class="form-floating">
+                                                <input type="password" id="patientPassword" class="form-control" size="30" minlength="8" placeholder="Your Password" required>
+                                                <label for="patientPassword">Password:</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- Password Repeat -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="password" id="patientPassRepeat" class="form-control" size="30" placeholder="Re-enter Your Password" required>
+                                            <label for="patientPassRepeat">Re-enter Password:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Addressline 1 -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" id="patientAddress1" class="form-control" size="30" placeholder="Address-line 1" required>
+                                            <label for="patientAddress1">Address-line 1:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Addressline 2 -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" id="patientAddress2" class="form-control" size="30" placeholder="Address-line 2 (Optional)">
+                                            <label for="patientAddress2">Address-line 2:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- City -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <select id="patientCity" class="form-select control-height" required>
+                                            <option class="select-item" value="" disabled selected>Select Nearest City</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Submit Button -->
+                                <div class="row justify-content-end">
+                                    <div class="col col-6 text-end d-grid gap-2 mt-4">
+                                        <input type="submit" class="btn btn-primary" value="Sign-Up">
+                                    </div>
+                                </div>
+                                <div class="row justify-content-end">
+                                    <div class="col-6 text-center">
+                                        <small>Already have an account? <a href="#">Sign&hybull;In</a></small>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <p></a></p>
+                <div class="container-fluid text-center">
+                    <p><strong>Or</strong> do you want to enter as a <strong>doctor</strong>? <a href="#">Sign&hybull;Up</a>&nbsp;|&nbsp;<a href="#">Sign&hybull;In</a></p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
