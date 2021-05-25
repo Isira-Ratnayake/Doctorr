@@ -1,32 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
         <meta name="author" content="T Lakshan">
-        <meta name="veiwport" content="width=device-width, initial-scale=1.0">
         <title>Doctor | Sign-Up</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="Sign-up-Doctor.css">
     </head>
-    <body>
-        <img src="images/logo.jpg" alt="logo">
-        <h1>Sign-Up as a Doctor</h1>
-        <form>
-            Name:
-            <input type="text" name="name" value="Dr."><br>
-            Gender:
-            <input type="radio" name="gender">Male <input type="radio" name="gender">Female<br>
-            E-mail:
-            <input type="email" name="email"><br>
-            Password:
-            <input type="password" name="password" size="30" minlength="8"><br>
-            Re-Enter Password:
-            <input type="password" name="re-password" size="30" minlength="8"><br>
-            Specialization:
-            <input type="text" name="Specialization"><br>
-            Licence Number:
-            <input type="text" name="lnumber"><br>
-            <input type="button" name="sign-up" value="Sign-Up">
-        </form>
-        <p>Already have an account?<a href="#">Sign-In</a></p>
-        <p>Or, do you want to enter as a patient? <a href="#">Sign-In</a> | <a href="#">Sign-Up</a></p>
+    <body">
+        <div class="row my-4 align-items-center body-section">
+            <div class="col">
+                <header>
+                    <h1 class="text-center"><img src="images/logo.png" alt="Doctorr Logo"> Sign&hybull;Up&nbsp;as&nbsp;a&nbsp;Doctor</h1>
+                </header>
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col col-lg-5 col-md-6 col-sm-8 col-10">
+                            <form class="container-fluid border rounded-3 pt-5 pb-4 bg-light">
+                                <!-- Doctor Name -->
+                                <div class="row mb-2">
+                                    <div class="col col-12">
+                                        <div class="form-floating">
+                                            <input type="text" id="doctorName" class="form-control" size="30" placeholder="Your Name" value="Dr." required>
+                                            <label for="doctorName">Name:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Gender -->
+                                <div class="row mb-2 p-2 control-height align-items-center">
+                                    <div class="col">
+                                        <label>Gender:</label>
+                                    </div>
+                                    <div class="col text-end">
+                                        <span>
+                                            <input type="radio" id="doctorGenderMale" class="form-check-input" name="gender"> <label for="doctorGenderMale" class="form-check-label">Male</label>
+                                        </span>
+                                    </div>
+                                    <div class="col text-end">
+                                        <span>
+                                            <input type="radio" id="doctorGenderFemale" class="form-check-input" name="gender"> <label for="doctorGenderFemale" class="form-check-label">Female</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="email" id="doctorEmail" class="form-control" size="30" placeholder="Your E-mail" required>
+                                            <label for="doctorEmail">E-mail:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Password -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="password" id="doctorPassword" class="form-control" size="30" minlength="8" placeholder="Your Password" required>
+                                            <label for="doctorPassword">Password:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Confirm Password -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="password" id="doctorPassRepeat" class="form-control" size="30" placeholder="Re-enter Your Password" required>
+                                            <label for="doctorPassRepeat">Re-enter Password:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Specialization -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" id="specialization" class="form-control" size="30" placeholder="Specialization" required>
+                                            <label for="specialization">Specialization:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Licence Number -->
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" id="lnumber" class="form-control" size="30" placeholder="Licence Number">
+                                            <label for="licenceNumber">Licence Number:</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Submit Button -->
+                                <div class="row justify-content-end">
+                                    <div class="col col-6 text-end d-grid gap-2 mt-4">
+                                        <input type="submit" class="btn btn-primary" value="Sign-Up">
+                                    </div>
+                                </div>
+                                <div class="row justify-content-end">
+                                    <div class="col-6 text-center">
+                                        <small>Already have an account? <a href="#">Sign&hybull;In</a></small>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <p></a></p>
+                <div class="container-fluid text-center">
+                    <p><strong>Or</strong> do you want to enter as a <strong>patient</strong>? <a href="#">Sign&hybull;Up</a>&nbsp;|&nbsp;<a href="#">Sign&hybull;In</a></p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
