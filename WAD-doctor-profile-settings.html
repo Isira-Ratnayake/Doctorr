@@ -2,115 +2,330 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="" content="">
-        <meta name="" content="">
-        <title>Doctor profile settings</title>
+        <title>Doctorr | profile | settings-I</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> <!-- Adds bootstrap CSS to webpage -->
+        <script src="js/bootstrap.min.js"></script> <!-- Add Bootstrap scripts to page -->
+        <link rel="stylesheet" type="text/css" href="doctorprofile-I-styles.css"> <!-- Links custom CSS style sheets to webpage -->
     </head>
     <body>
-        <div id="nav">
-            <!--nav with logo and browse option-->
-            <ul>
-                <li><a href="#"><img src="images/logo.jpg" alt="logo"> </a></li>
-                <li><a href="#"><img src="images/frown.jpg" alt="browse"> </a></li>
-            </ul>
-        </div>
-        <div id="profile">
-            <!--details of the doctor-->
-            <h1>Profile Settings</h1>
-            <form>
-                <h4>Personal Information</h4><br>
-                Name <input type="text" placeholder="John Smith"><br>
-                Email <input type="email" placeholder="Johnsmith@gmail.com"><br>
-                <h4>Account Security</h4><br>
-                Current Password <input type="password" placeholder="Aa#"><br>
-                New Password <input type="password" placeholder="Aa#"><br>
-                Re-enter New password<input type="password" placeholder="Aa#"><br>
-                <h4>Professional Information</h4>
-                Specialization <input type="text" placeholder="Specialization"><br>
-                license <input type="text" placeholder="License NUmber"><br>
-            </form>
-            <div id="mid">
-                <!--details of the workplaces-->
-                <h2>Workplaces</h2><br>
-                <form>
-                    Workplace Name<input type="text"> &nbsp; 
-                    Workplace Type
-                        <select>
-                            <option>01</option>
-                            <option>02</option>
-                        </select><br>
-                    Workplace Coordinates<input type="text"> &nbsp;
-                    city
-                        <select>
-                            <option>I</option>
-                            <option>II</option>
-                        </select><br>
-                    <input type="submit" value="Add record"><br>
-                    <div>
-                        Coordinate Generator
-                    </div><br>
-                    Coordinates: <input type="text"><br>
-                    <table border="1px solid black">
-                        <tr>
-                            <th>Workplace Name</th>
-                            <th>Workplace Type</th>
-                            <th>City</th>
-                            <th>Workplace Coordinates</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" placeholder="--"></td>
-                            <td><input type="text" placeholder="--"></td>
-                            <td><input type="text" placeholder="--"></td>
-                            <td><input type="text" placeholder="--"></td>
-                        </tr>
-                    </table><br>
-                    Record Number <input type="number">
-                    <button>Delete Record</button><br>
-                </form>
-            </div>
-            <div id="botm">
-                <!--Details of work hours-->
-                <h2>Work Hours</h2><br>
-                <form>
-                    Workplace Name<br>
-                    <select>
-                        <option>001</option>
-                        <option>002</option>
-                    </select><br>
-                    Day
-                    <select>
-                        <option>001i</option>
-                        <option>002i</option>
-                    </select>&nbsp;
-                    Start Time
-                    <select>
-                        <option>001ii</option>
-                        <option>002ii</option>
-                    </select>&nbsp;
-                    End Time
-                    <select>
-                        <option>001iii</option>
-                        <option>002iii</option>
-                    </select>&nbsp;
-                    <input type="submit" value="Add Record"><br>
-                    <table border="1px solid black">
-                        <tr>
-                            <th>Workplace Name</th>
-                            <th>Day</th>
-                            <th>Start Time</th>
-                            <th>End Time</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" placeholder="--"></td>
-                            <td><input type="text" placeholder="--"></td>
-                            <td><input type="time" placeholder="--"></td>
-                            <td><input type="time" placeholder="--"></td>
-                        </tr>
-                    </table><br>
-                    Record Number <input type="number">
-                    <button>Delete Record</button>
-                </form>
-            </div>
-        </div>
+            <!--navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <div class="row my-5 justify-content-center">
+                    <div class="col col-lg-5 col-md-6 col-sm-8 col-10">
+                    <!--Form ****all the fields are included in a single form****-->
+                    <form class="container-fluid border-rounded-3 pt-5 pb-4 bg-light">
+                            <!--fieldset for the profile settings-->
+                            <fieldset>
+                                <legend class="Profile-Settings"><h2>Profile Settings</h2></legend>
+                                    <!--for personal information-->
+                                    <h4>Personal&nbsp;Information</h4>
+                                    <div class="row mb-2">
+                                        <div class="col col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="doctorName" placeholder="Name" value="Dr." required>
+                                                <label for="doctorName">Name</label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col col-12">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="doctorEmail" placeholder="E-mail" required>
+                                                <label for="doctorEmail">E-mail</label>
+                                            </div>
+                                        </div>                                       
+                                    </div>    
+                                    <!--for account security-->    
+                                    <h4>Account&nbsp;Security</h4>
+                                    <div class="row mb-2">
+                                        <div class="col col-12">
+                                            <div class="form-floating">
+                                                <input type="password" class="form-control" id="doctorPassword" placeholder="Password" required>
+                                                <label for="doctorPassword">Password</label>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col col-12">
+                                            <div class="form-floating">
+                                                <input type="password" class="form-control" id="doctorNewPassword" placeholder="New Password">
+                                                <label for="doctorNewPassword">New Password</label>
+                                            </div>
+                                        </div>                                        
+                                    </div>    
+                                    <div class="row mb-4">
+                                        <div class="col col-12">
+                                            <div class="form-floating">
+                                                <input type="password" class="form-control" id="reEnterNewPassword" placeholder="Re-Enter New Password">
+                                                <label for="reEnterNewPassword">Re-Enter New Password</label>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <!--for professional Information-->    
+                                    <h4>Professional&nbsp;Information</h4>
+                                    <div class="row mb-2">
+                                        <div class="col col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="Specialization" placeholder="Specialization" required>
+                                                <label for="doctorSpecialization">Specialization</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="licenseNumber" placeholder="License Number" required>
+                                                <label for="doctorLicenseNumber">License Number</label>
+                                            </div>
+                                        </div>
+                                    </div>   
+
+                            </fieldset>
+                            <!--fieldset for the workplace information of doctor-->   
+                            <fieldset>
+                                <legend class="Workplaces"><h2>Workplaces</h2></legend>
+                                <!--for workplaces Name & Type-->
+                                <div class="row g-2 mb-2">
+                                    <div class="col col-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="workplaceName" placeholder="" value="">
+                                            <label for="workplaceName">Workplace&nbsp;Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col col-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="workplaceType" aria-label="">
+                                            <option disabled selected>Click to select type</option>
+                                            <option value="1">Government Hospital</option>
+                                            <option value="2">Private Hospital</option>
+                                            <option value="3">Private Channeling Center</option>
+                                            </select>
+                                            <label for="workplaceType">Workplace&nbsp;Type</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--for workplace coordinates and city-->
+                                <div class="row mb-1 g-2">
+                                    <div class="col col-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="workplaceCoordinates" placeholder="" value="">
+                                            <label for="workplaceCoordinates">Workplace&nbsp;Coordinates</label>
+                                        </div>
+                                    </div>
+                                    <div class="col col-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="workplaceCity" aria-label="">
+                                            <option disabled selected>Click to add city</option>
+                                            <option value="1">japura</option>
+                                            <option value="2">maharagama</option>
+                                            <option value="3">colombo</option>
+                                            </select>
+                                            <label for="workplaceCity">Workplace&nbsp;City</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Button to add the record-->
+                                <div class="row justify-content-end">
+                                    <div class="col col-sm-6 col-lg-4 text-end d-grid gap-2 mt-2 mb-4">
+                                        <input type="submit" class="btn btn-primary" value="Add&nbsp;Record">
+                                    </div>
+                                </div>
+                                <!--Area allocated for coordinate Generator-->
+                                <div class="row justify-content-center">
+                                    <div class="col-8">
+                                        <span>**Coordinate Generator**</span>
+                                    </div>
+                                </div>
+                                <!--generated cordinates appear-->
+                                <div class="row my-4 g-1 align-items-center">
+                                    <div class="col col-4">
+                                    <label for="Coordinates" class="col-form-label"><b>Coordinates:</b></i></label>
+                                    </div>
+                                    <div class="col g-2 col-4">
+                                    <input type="number" id="coordinatesGenerated" class="form-control" aria-describedby="">
+                                    </div>
+                                    <div class="col col-4">
+                                    <span id="coordinateshelp" class="form-text text-muted">
+                                        <small>Generated&nbsp;Coordinates</small>
+                                    </span>
+                                    </div>
+                                </div>
+                                <!--table generated after adding records-->
+                                <div>
+                                    <table class="table table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Workplace Name</th>
+                                            <th scope="col">Workplace Type</th>
+                                            <th scope="col">City</th>
+                                            <th scope="col">Workplace Coordinates</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="table-primary">
+                                            <td>--</th>
+                                            <td>--</td>
+                                            <td>--</td>
+                                            <td>--</td>
+                                        </tr>
+                                        <tr class="table-primary">
+                                            <td>--</th>
+                                            <td>--</td>
+                                            <td>--</td>
+                                            <td>--</td>
+                                        </tr>
+                                        <tr class="table-primary">
+                                            <td>--</th>
+                                            <td>--</td>
+                                            <td>--</td>
+                                            <td>--</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--For deleting records-->
+                                <div class="row justify-content-end">
+                                    <div class="col col-4 text-end d-grid gap-2">
+                                            <Strong>Record Number:</Strong>
+                                    </div>
+                                    <div class="col col-4 text-end d-grid gap-2">    
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control" id="recordNumber" placeholder="" value="">
+                                                <label for="recordNumber"></label>
+                                            </div>
+                                    </div>
+                                    <div class="col col-4 text-end d-grid gap-2">
+                                        <input type="submit" class="btn btn-primary" value="Delete&nbsp;Record">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!--fieldset for working hours of doctor-->
+                            <fieldset>
+                                <legend class="workHours"><h2>Work Hours</h2></legend>
+                                    <div class="row mb-2">
+                                    <div class="col mb-2 col-lg-6 col-sm-8 ">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="WorkPlaces" aria-label="">
+                                            <option disabled selected>Select workplace</option>
+                                            <option value="1">Op1</option>
+                                            <option value="2">Op2</option>
+                                            <option value="3">Op3</option>
+                                            </select>
+                                            <label for="floatingSelectGrid">Workplace&nbsp;Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col">
+                                            <div class="col mb-2 col-lg-6 col-sm-8">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="WorkPlaces" aria-label="">
+                                                    <option disabled selected>Select&nbsp;Day</option>
+                                                    <option value="1">Monday</option>
+                                                    <option value="2">Tuesday</option>
+                                                    <option value="3">Wednesday</option>
+                                                    <option value="3">Thursday</option>
+                                                    <option value="3">Friday</option>
+                                                    <option value="3">Saturday</option>
+                                                    <option value="3">Sunday</option>
+                                                    </select>
+                                                    <label for="floatingSelectGrid">workDay</label>
+                                                </div>
+                                            </div>
+                                            <div class="col mb-2 col-lg-6 col-sm-8">
+                                                <div class="form-floating">
+                                                <input type="datetime" class="form-control" id="startTime" placeholder="" value="">
+                                                <label for="startTime">Start&nbsp;Time</label>
+                                                </div>
+                                            </div>
+                                            <div class="col mb-2 col-lg-6 col-sm-8">
+                                                <div class="form-floating">
+                                                <input type="email" class="form-control" id="endTime" placeholder="" value="">
+                                                <label for="endTime">End&nbsp;Time</label>
+                                                </div>
+                                            </div>
+                                            <div class="col mb-3 col-lg-6 col-sm-8">
+                                                <div class="form-floating">
+                                                    <input type="submit" class="btn btn-primary" value="Add&nbsp;Record">
+                                                </div>               
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    <!--details of the workplace days and time-->
+                                    <div>
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Workplace&nbsp;Name</th>
+                                                    <th scope="col">Work&nbsp;Day</th>
+                                                    <th scope="col">Start&nbsp;Time</th>
+                                                    <th scope="col">End&nbsp;Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-primary">
+                                                    <td>--</th>
+                                                    <td>--</td>
+                                                    <td>--</td>
+                                                    <td>--</td>
+                                                </tr>
+                                                <tr class="table-primary">
+                                                    <td>--</th>
+                                                    <td>--</td>
+                                                    <td>--</td>
+                                                    <td>--</td>
+                                                </tr>
+                                                <tr class="table-primary">
+                                                    <td>--</th>
+                                                    <td>--</td>
+                                                    <td>--</td>
+                                                    <td>--</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                <!--delete work hour records-->    
+                                <div class="row justify-content-end">
+                                    <div class="col col-4 text-end d-grid gap-2">
+                                            <Strong>Record Number:</Strong>
+                                    </div>
+                                    <div class="col col-4 text-end d-grid gap-2">    
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control" id="recordNumber" placeholder="" value="">
+                                                <label for="recordNumber"></label>
+                                            </div>
+                                    </div>
+                                    <div class="col col-4 text-end d-grid gap-2">
+                                        <input type="submit" class="btn btn-primary" value="Delete&nbsp;Record">
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>        
     </body>
 </html>
