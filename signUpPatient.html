@@ -29,19 +29,16 @@
                                     </div>
                                 </div>
                                 <!-- Gender -->
-                                <div class="row p-1 mb-2 control-height align-items-center">
-                                    <div class="col-sm-2 col-6">
+                                <div class="row mb-2 p-2 control-height align-items-center">
+                                    <div class="col col-xl-2 col-sm-3 col-4">
                                         <label>Gender</label>
                                     </div>
-                                    <div class="col-xl-7 col-md-6 col-sm-5 col-6 text-end">
-                                        <span>
-                                            <label for="patientGenderMale" class="form-check-label">Male</label> <input type="radio" id="patientGenderMale" class="form-check-input" name="gender">
-                                        </span>
-                                    </div>
-                                    <div class="col-xl-3 col-md-4 col-sm-5 col-12 text-end">
-                                        <span>
-                                            <label for="patientGenderFemale" class="form-check-label">Female</label> <input type="radio" id="patientGenderFemale" class="form-check-input" name="gender"> 
-                                        </span>
+                                    <div class="col-xl-4 col-sm-5 col-8">
+                                        <select id="patientGender" class="form-select" required>
+                                            <option class="select-item" value="" disabled selected></option>
+                                            <option class="select-item">Male</option>
+                                            <option class="select-item">Female</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <!-- Email -->
@@ -53,37 +50,35 @@
                                         </div>
                                     </div>
                                 </div>
-                                    <!-- Password -->
-                                    <div class="row mb-2">
-                                        <div class="col">
-                                            <div class="form-floating">
-                                                <input type="password" id="patientPassword" class="form-control" size="30" minlength="8" placeholder="Your Password" required>
-                                                <label for="patientPassword">Password</label>
-                                            </div>
+                                <!-- Password -->
+                                <div class="row gx-2">
+                                    <div class="col-xl-6 col-12">
+                                        <div class="form-floating mb-2">
+                                            <input type="password" id="patientPassword" class="form-control" size="30" minlength="8" placeholder="Your Password" required>
+                                            <label for="patientPassword">Password</label>
                                         </div>
                                     </div>
-                                <!-- Password Repeat -->
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <div class="form-floating">
+                                <!-- Confirm Password -->
+                                    <div class="col-xl-6 col-12">
+                                        <div class="form-floating mb-2">
                                             <input type="password" id="patientPassRepeat" class="form-control" size="30" placeholder="Re-enter Your Password" required>
                                             <label for="patientPassRepeat">Re-enter Password</label>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Addressline 1 -->
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <div class="form-floating">
+                                <div class="row gx-2">
+                                    <div class="col-xl-6 col-12">
+                                        <div class="form-floating mb-2">
                                             <input type="text" id="patientAddress1" class="form-control" size="30" placeholder="Address-line 1" required>
                                             <label for="patientAddress1">Address-line 1</label>
                                         </div>
                                     </div>
-                                </div>
+
                                 <!-- Addressline 2 -->
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <div class="form-floating">
+
+                                    <div class="col-xl-6 col-12">
+                                        <div class="form-floating mb-2">
                                             <input type="text" id="patientAddress2" class="form-control" size="30" placeholder="Address-line 2 (Optional)">
                                             <label for="patientAddress2">Address-line 2 (Optional)</label>
                                         </div>
@@ -98,13 +93,13 @@
                                     </div>
                                 </div>
                                 <!-- Submit Button -->
-                                <div class="row justify-content-end">
+                                <div class="row justify-content-end mb-3">
                                     <div class="col col-6 text-end d-grid gap-2 mt-4">
                                         <input type="submit" class="btn btn-primary" value="Sign-Up">
                                     </div>
                                 </div>
                                 <div class="row justify-content-end">
-                                    <div class="col-6 text-center">
+                                    <div class="col-12 text-end">
                                         <small>Already have an account? <a href="#">Sign&hybull;In</a></small>
                                     </div>
                                 </div>
