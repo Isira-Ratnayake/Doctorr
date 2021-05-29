@@ -29,3 +29,4 @@ Displays a map showing locations of all places of work for each doctor. The map 
 Has responsive customer support via e-mail.
 The website will provide users with the option to choose one of the three languages spoken in Sri Lanka, that’s to say Sinhala, English, and Tamil, as the website language.
 The website will be written in way that would makes it highly compatible with screen readers. This will help visually impaired people improving accessibility of the website.
+ website will be written in way that would makes it highly compatible with screen readers. This will help visually impaired people improving accessibility of the website.
