@@ -22,26 +22,23 @@
                                 <!-- Doctor Name -->
                                 <div class="row mb-2">
                                     <div class="col col-12">
-                                        <div class="form-floating">
-                                            <input type="text" id="doctorName" class="form-control" size="30" placeholder="Your Name" value="Dr." required>
-                                            <label for="doctorName">Name</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">Dr.</span>
+                                        <input type="text" id="doctorName" class="form-control control-height" size="30" placeholder="Name" required>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Gender -->
                                 <div class="row mb-2 p-2 control-height align-items-center">
-                                    <div class="col-sm-2 col-6">
+                                    <div class="col col-xl-2 col-sm-3 col-4">
                                         <label>Gender</label>
                                     </div>
-                                    <div class="col-xl-7 col-md-6 col-sm-5 col-6 text-end">
-                                        <span>
-                                            <input type="radio" id="doctorGenderMale" class="form-check-input" name="gender"> <label for="doctorGenderMale" class="form-check-label">Male</label>
-                                        </span>
-                                    </div>
-                                    <div class="col-xl-3 col-md-4 col-sm-5 col-12 text-end">
-                                        <span>
-                                            <input type="radio" id="doctorGenderFemale" class="form-check-input" name="gender"> <label for="doctorGenderFemale" class="form-check-label">Female</label>
-                                        </span>
+                                    <div class="col-xl-4 col-sm-5 col-8">
+                                        <select id="doctorGender" class="form-select" required>
+                                            <option class="select-item" value="" disabled selected></option>
+                                            <option class="select-item">Male</option>
+                                            <option class="select-item">Female</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <!-- Email -->
@@ -54,49 +51,44 @@
                                     </div>
                                 </div>
                                 <!-- Password -->
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <div class="form-floating">
+                                <div class="row gx-2">
+                                    <div class="col-xl-6 col-12">
+                                        <div class="form-floating mb-2">
                                             <input type="password" id="doctorPassword" class="form-control" size="30" minlength="8" placeholder="Your Password" required>
                                             <label for="doctorPassword">Password</label>
                                         </div>
                                     </div>
-                                </div>
                                 <!-- Confirm Password -->
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <div class="form-floating">
+                                    <div class="col-xl-6 col-12">
+                                        <div class="form-floating mb-2">
                                             <input type="password" id="doctorPassRepeat" class="form-control" size="30" placeholder="Re-enter Your Password" required>
                                             <label for="doctorPassRepeat">Re-enter Password</label>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row gx-2">
                                 <!-- Specialization -->
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <div class="form-floating">
-                                            <input type="text" id="specialization" class="form-control" size="30" placeholder="Specialization" required>
-                                            <label for="specialization">Specialization</label>
-                                        </div>
+                                    <div class="col-xl-6 col-12">
+                                        <select id="doctorSpec" class="form-select control-height mb-2" required>
+                                            <option class="select-item" value="" disabled selected>Your Specialization</option>
+                                        </select>
                                     </div>
-                                </div>
                                 <!-- Licence Number -->
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <div class="form-floating">
+                                    <div class="col-xl-6 col-12">
+                                        <div class="form-floating mb-2">
                                             <input type="text" id="lnumber" class="form-control" size="30" placeholder="Licence Number">
                                             <label for="licenceNumber">Licence Number</label>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Submit Button -->
-                                <div class="row justify-content-end">
+                                <div class="row justify-content-end mb-3">
                                     <div class="col col-6 text-end d-grid gap-2 mt-4">
                                         <input type="submit" class="btn btn-primary" value="Sign-Up">
                                     </div>
                                 </div>
                                 <div class="row justify-content-end">
-                                    <div class="col-6 text-center">
+                                    <div class="col-12 text-end">
                                         <small>Already have an account? <a href="#">Sign&hybull;In</a></small>
                                     </div>
                                 </div>
