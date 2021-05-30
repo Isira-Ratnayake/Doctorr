@@ -45,54 +45,50 @@
             </div> 
 
         <!-- form to search a doctor-->
-        <div class="row my-4 align-items-center body-section">
+        <div class="row py-4 align-items-center body-section">
             <div class="col">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div class="col col-lg-5 col-md-6 col-sm-8 col-10">
-                                <div class="container-fluid py-3 px-5 header-search">
-                                        <h1 class="text-start px-4">Search by...</h1>
-                                </div>
-                                <form class="container-fluid border border-primary rounded bg-light">
-                                    <div class="container-fluid py-4 border-rounded">
-                                        <div class="form-floating mb-2">
-                                            <input type="text" class="form-control" id="searchName" placeholder="" value="Dr.">
-                                            <label for="doctorName">Doctor&nbsp;Name</label>
-                                        </div>
-                                        <div class="form-floating mb-2">
-                                            <select class="form-select" id="doctorSpecialization" aria-label="">
-                                            <option disabled selected>Select the Specialization</option>
-                                            <option value="1">ENT</option>
-                                            <option value="2">Gastro-Intestinal</option>
-                                            <option value="3">Oncologist</option>
-                                            </select>
-                                            <label for="doctorSpecialization">Specialization</label>
-                                        </div>
-                                        <div class="form-floating mb-2">
-                                            <select class="form-select" id="nearestCity" aria-label="">
-                                            <option disabled selected>Select&nbsp;service&nbsp;City</option>
-                                            <option value="1">c1</option>
-                                            <option value="2">c2</option>
-                                            <option value="3">c3</option>
-                                            </select>
-                                            <label for="nearestCity">City</label>
-                                        </div>
-                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                            <button class="btn btn-primary btn-lg me-md-2" type="button">Submit</button>
-                                        </div>
+                            <div class="container-fluid py-3 px-5 header-search">
+                                    <h1 class="text-start px-4">Search by...</h1>
+                            </div>
+                            <form class="container-fluid border border-primary rounded bg-light">
+                                <div class="container-fluid py-4 border-rounded">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" class="form-control" id="searchName" placeholder="" value="Dr.">
+                                        <label for="doctorName">Doctor&nbsp;Name</label>
                                     </div>
-                                </form>   
-                            <div>
-                        </div>
-                    </div>                       
-                </div>
-            </div>            
+                                    <div class="form-floating mb-2">
+                                        <select class="form-select" id="doctorSpecialization" aria-label="">
+                                        <option disabled selected>Select the Specialization</option>
+                                        <option value="1">ENT</option>
+                                        <option value="2">Gastro-Intestinal</option>
+                                        <option value="3">Oncologist</option>
+                                        </select>
+                                        <label for="doctorSpecialization">Specialization</label>
+                                    </div>
+                                    <div class="form-floating mb-2">
+                                        <select class="form-select" id="nearestCity" aria-label="">
+                                        <option disabled selected>Select&nbsp;service&nbsp;City</option>
+                                        <option value="1">c1</option>
+                                        <option value="2">c2</option>
+                                        <option value="3">c3</option>
+                                        </select>
+                                        <label for="nearestCity">City</label>
+                                    </div>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button class="btn btn-primary btn-lg me-md-2" type="button">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>                       
+                    </div>
+                </div>            
+            </div>
         </div>
         <!--display the search results-->
-        <div class="container-fluid my-4" id="displayResults">
-            <div>
-                
-            </div>
+        <div class="container-fluid" id="displayResults">
         </div>         
         <!--Footer-->
             <footer class="container-fluid bg-dark">
