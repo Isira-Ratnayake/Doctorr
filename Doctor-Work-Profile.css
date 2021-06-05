@@ -1,0 +1,22 @@
+.tagName {
+    color:cadetblue;
+}
+.generator {
+    height: 300px;;
+    width: 300px;
+    background-color: rgb(230, 244, 245);
+    border-radius: 5px;
+}
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    overflow-x: auto;
+}
+.control-height {
+    height: 2.5rem;
+    text-align: center;
+}
+body {
+    overflow-x: hidden;
+}
