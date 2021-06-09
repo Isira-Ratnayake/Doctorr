@@ -7,46 +7,11 @@
         <title>Doctorr | Doctor | Sign-Up</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <script src="js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="Sign-up-Doctor.css">
-        
-        style>
-            .invalid-input-val:invalid {
-                border-color: #FF0000;
-                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
-            }
-        </style>
-        <script>
-            //funtion to check form validation
-            function validateForm(valForm) {
-                var pass = valForm.elements["doctorPassword"];
-                var passRep = valForm.elements["doctorPassRepeat"];
-                //reset validity of passRep
-                passRep.setCustomValidity("");
-
-                if(valForm.checkValidity("")) {
-                    //check password match
-                    if(pass.value !== passRep.value) {
-                        passRep.setCustomValidity("Passwords does not match!");
-                        passRep.value = "";
-                    }
-                }
-                //putting borders to all invalid inputs.
-                for(i=0; i<(valForm.elements.length - 1); i++) {
-                    invalidBorder(val.form.elements[i]);
-                }
-            }
-
-            //to remove blank spaces at the beginning and at the end of the strings.
-            function strTrimmer(curInput) {
-                curInput.value = curInput.value.trim();
-            }
-            //add effects on borders when invalid input.
-            function invalidBorder(curInput) {
-                curInput.classList.add("invalid-input-val");
-            }
-        </script>
+        <link rel="stylesheet" type="text/css" href="formStyle.css">
+        <script src="formScript.js"></script>
     </head>
-    <body">
+
+    <body>
         <div class="row my-4 align-items-center body-section">
             <div class="col">
                 <header>
@@ -61,18 +26,18 @@
                                     <div class="col col-12">
                                         <div class="input-group">
                                             <span class="input-group-text">Dr.</span>
-                                        <input type="text" id="doctorName" class="form-control control-height" size="30" placeholder="Name" required>
+                                            <input type="text" id="uName" class="form-control control-height"  placeholder="Name" onchange="strTrimmer(this);" onblur="invalidBorder(this);" required>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Gender -->
                                 <div class="row mb-2 p-2 control-height align-items-center">
                                     <div class="col col-xl-2 col-sm-3 col-4">
-                                        <label>Gender</label>
+                                        <label for="uGender">Gender</label>
                                     </div>
                                     <div class="col-xl-4 col-sm-5 col-8">
-                                        <select id="doctorGender" class="form-select" required>
-                                            <option class="select-item" value="" disabled selected></option>
+                                        <select id="uGender" class="form-select" required>
+                                            <option class="select-item" value="" onblur="invalidBorder(this);" disabled selected></option>
                                             <option class="select-item">Male</option>
                                             <option class="select-item">Female</option>
                                         </select>
@@ -82,8 +47,8 @@
                                 <div class="row mb-2">
                                     <div class="col">
                                         <div class="form-floating">
-                                            <input type="email" id="doctorEmail" class="form-control" size="30" placeholder="Your E-mail" required>
-                                            <label for="doctorEmail">E-mail</label>
+                                            <input type="email" id="uEmail" class="form-control"  placeholder="Your E-mail" onblur="invalidBorder(this);" required>
+                                            <label for="uEmail">E-mail</label>
                                         </div>
                                     </div>
                                 </div>
@@ -91,29 +56,29 @@
                                 <div class="row gx-2">
                                     <div class="col-xl-6 col-12">
                                         <div class="form-floating mb-2">
-                                            <input type="password" id="doctorPassword" class="form-control" size="30" minlength="8" placeholder="Your Password" required>
-                                            <label for="doctorPassword">Password</label>
+                                            <input type="password" id="uPassword" class="form-control"  minlength="8" placeholder="Your Password" onblur="invalidBorder(this);" required>
+                                            <label for="uPassword">Password</label>
                                         </div>
                                     </div>
                                 <!-- Confirm Password -->
                                     <div class="col-xl-6 col-12">
                                         <div class="form-floating mb-2">
-                                            <input type="password" id="doctorPassRepeat" class="form-control" size="30" placeholder="Re-enter Your Password" required>
-                                            <label for="doctorPassRepeat">Re-enter Password</label>
+                                            <input type="password" id="uPassRepeat" class="form-control"  placeholder="Re-enter Your Password" onblur="invalidBorder(this);" oninput="clearInvalid(this);" required>
+                                            <label for="uPassRepeat">Re-enter Password</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row gx-2">
                                 <!-- Specialization -->
                                     <div class="col-xl-6 col-12">
-                                        <select id="doctorSpec" class="form-select control-height mb-2" required>
+                                        <select id="doctorSpec" class="form-select control-height mb-2" onblur="invalidBorder(this);" required>
                                             <option class="select-item" value="" disabled selected>Your Specialization</option>
                                         </select>
                                     </div>
                                 <!-- Licence Number -->
                                     <div class="col-xl-6 col-12">
                                         <div class="form-floating mb-2">
-                                            <input type="text" id="lnumber" class="form-control" size="30" placeholder="Licence Number">
+                                            <input type="text" id="lNumber" class="form-control" placeholder="Licence Number" onblur="invalidBorder(this);" onchange="strTrimmer(this);" required>
                                             <label for="licenceNumber">Licence Number</label>
                                         </div>
                                     </div>
@@ -121,7 +86,7 @@
                                 <!-- Submit Button -->
                                 <div class="row justify-content-end mb-3">
                                     <div class="col col-lg-4 col-sm-5 col-6 text-end d-grid gap-2 mt-4">
-                                        <input type="submit" class="btn btn-primary" value="Sign-Up">
+                                        <input type="submit" class="btn btn-primary" value="Sign-Up" onclick="validateForm(this.form);">
                                     </div>
                                 </div>
                                 <div class="row justify-content-end">
