@@ -2,11 +2,15 @@ body {
     overflow-x: hidden;
 }
 .body-section {
-    height: 100vh;
+    height: 90vh;
 }
 .control-height {
     height: 3.5rem;
 }
 header h1 {
     font-size: 1.8rem;
+}
+.invalid-input-val:invalid {
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
 }
