@@ -1,0 +1,11 @@
+body {
+    overflow-x: hidden;
+}
+#displayResults {
+    height:75vh;
+    background-color: cyan;
+    border-radius: 5px;
+}
+.header-search {
+    margin-top: 54px;
+}
