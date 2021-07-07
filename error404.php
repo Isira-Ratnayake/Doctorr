@@ -1,4 +1,9 @@
 <?php
+/*
+    generates error404 page. Error message from the database.php file will be recieved and displayed
+*/
+
+//Recieves error message and assigns to $error_message
     $error_message = filter_input(INPUT_GET,'errorMsg');
 ?>
 <!DOCTYPE html>
