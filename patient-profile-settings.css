@@ -39,9 +39,11 @@ header h1 {
     justify-content: center;
     color:rgb(255, 0, 0);
 }
+/* styles form control height */
 .control-height {
     height: 3.5rem;
  }
+ /* styles .sub-navigation bar */
  .sub-navigation{
     text-align: right;
     background-color: #292b2ca4;
@@ -63,9 +65,7 @@ header h1 {
     justify-content: center;
     color:rgb(0, 161, 0);
 }
-.overflowScrollX {
-    overflow-x: auto;
-}
+/* styles main content */
 .body-section-2 {
     height: 65vh;
     overflow-y: scroll;
