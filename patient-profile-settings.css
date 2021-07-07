@@ -10,25 +10,30 @@
 body {
     overflow-x: hidden;
 }
-/* styles body content overflow */
+/* styles navbar brand logo */
 .logo {
     width: 170px; 
     height: 38px; 
 }
+/* styles main content of web page */
 .body-section {
     height: 100vh;
 }
+/* centers the page heading */
 header{
     display: flex;
     justify-content: center;
 }
+/* styles heading font size */
 header h1 {
     font-size: 1.3rem;
 }
+/* styles invalid form control border color */
 .invalid-input-val:invalid {
     border-color: #FF0000;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
 }
+/* styles error message */
  .error-msg {
     display: flex;
     justify-content: center;
@@ -52,6 +57,7 @@ header h1 {
 .sub-navigation span{
     color: #f7f7f7b0;
 }
+/* styles success message*/
 .success-msg {
     display: flex;
     justify-content: center;
