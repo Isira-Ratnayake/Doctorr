@@ -46,7 +46,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Resposive width adjustment -->
                         <div class="col col-lg-5 col-12 text-center">
+                            <!-- image -->
                             <img src="images/errorsteth.jpg" class="img-fluid steth-logo">
                         </div>
                     </div>
