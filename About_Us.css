@@ -1,0 +1,33 @@
+/* Styles to second navigation bar */
+.sub-navigation{
+    text-align: right;
+    background-color: #292b2ca4;
+}
+.sub-navigation a {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+.sub-navigation a:hover {
+    font-weight: 500;
+}
+.sub-navigation span{
+    color: #f7f7f7b0;
+}
+/*Logo size*/
+.logo {
+    width: 170px; 
+    height: 38px; 
+}
+.workspace {
+    height: 100vh;
+}
+.gp-logo{
+    height: 350px;
+    width: 350px;
+}
+.steth-logo{
+    height: 400px;
+    width: 400px;
+}
+
+
