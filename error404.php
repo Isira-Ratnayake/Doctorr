@@ -18,6 +18,7 @@
         <link rel="stylesheet" type="text/css" href="About_Us.css"> <!-- Links custom CSS style sheets to webpage -->
     </head>
     <body>
+        <!-- Aligns page content -->
         <div class="container-fluid">
             <div class="row align-items-center workspace">
                 <div class="container-fluid">
@@ -25,13 +26,16 @@
                         <div class="col">
                             <div class="row px-5">
                                 <div class="col">
+                                    <!-- Page Heading -->
                                     <h1 class="display-1">404</h1>
                                 </div>
                             </div>
                             <div class="row px-5">
                                 <div class="col">
+                                    <!-- Page text -->
                                     <p class="text-justify lead">
                                         <strong>An error occured while we were accessing your content:</strong><br>
+                                        <!-- Prints error message -->
                                         <?php 
                                             echo $error_message;
                                         ?>
