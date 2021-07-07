@@ -18,16 +18,17 @@
     width: 170px; 
     height: 38px; 
 }
+/* workspace styles */
 .workspace {
     height: 100vh;
 }
+/* Size of about us image */
 .gp-logo{
     height: 350px;
     width: 350px;
 }
+/* Size of error page image */
 .steth-logo{
     height: 400px;
     width: 400px;
 }
-
-
