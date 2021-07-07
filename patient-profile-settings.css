@@ -1,12 +1,16 @@
+/* styles form control height */
 .contro-height {
     height: 3.5rem;
 }
+/* styles form headings */
 .fieldHeader {
     color:cadetblue;
 }
+/* styles body content overflow */
 body {
     overflow-x: hidden;
 }
+/* styles body content overflow */
 .logo {
     width: 170px; 
     height: 38px; 
