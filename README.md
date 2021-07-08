@@ -1,4 +1,4 @@
-# WAD-Assignment
+# Doctorr
 Web Application Development final assignment
 ------------------------------------------------
 
