@@ -10,7 +10,8 @@ Doctorr - V1.0
 
 Important
 -----------------------------
-For testing purposes we have included several test accounts. They can be accessed using following e-mails and passwords.
+For testing purposes we have included several test accounts. They can be accessed using following e-mails and passwords.<br/>
+**doctordb.sql database file must be imported to mysql/mariadb server before hosting the website.**
 
 Doctor Accounts
 -----------------------------
