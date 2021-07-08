@@ -12,19 +12,19 @@
 For testing purposes we have included several test accounts. They can be accessed using following e-mails and passwords.
 
 ###Doctor Accounts
-**Dr. Niseka Pathiraja**
-nisekapathiraja@gmail.com
+**Dr. Niseka Pathiraja**<br/>
+nisekapathiraja@gmail.com<br/>
 pass_niseka
 
-**Dr. Isiwara Kumarage**
-isiwarakumarage@gmail.com
+**Dr. Isiwara Kumarage**<br/>
+isiwarakumarage@gmail.com<br/>
 pass_isiwara
 
-**Dr. Tishara Basnayake**
-tisharabasnayake@gmail.com
+**Dr. Tishara Basnayake**<br/>
+tisharabasnayake@gmail.com<br/>
 pass_tishara
 
 ###Patient Accounts
-**Isira Ratnayake**
-isiraratnayake@gmail.com
+**Isira Ratnayake**<br/>
+isiraratnayake@gmail.com<br/>
 pass_isira
