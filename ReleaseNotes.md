@@ -8,10 +8,12 @@
 - Doctors can easily and clearly display their workplaces, work schedules and career descriptions.
 - Users can search for doctors by name, specialization or city in any combination, to find the best doctor for their needs.
 
-##Important<br/>
+##Important
+-----------------------------
 For testing purposes we have included several test accounts. They can be accessed using following e-mails and passwords.
 
-###Doctor Accounts<br/>
+###Doctor Accounts
+-----------------------------
 **Dr. Niseka Pathiraja**<br/>
 nisekapathiraja@gmail.com<br/>
 pass_niseka
@@ -24,7 +26,8 @@ pass_isiwara
 tisharabasnayake@gmail.com<br/>
 pass_tishara
 
-###Patient Accounts<br/>
+###Patient Accounts
+------------------------------
 **Isira Ratnayake**<br/>
 isiraratnayake@gmail.com<br/>
 pass_isira
