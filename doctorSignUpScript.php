@@ -23,42 +23,42 @@
     */
     //Checks whether doctor name is empty.
     if (empty($uName)){
-        $outputMessage .= "Please enter your name.\n";
+        $outputMessage .= "Please enter your name.<br>";
         $isValid = FALSE;
     }
     //Checks whether doctor gender is empty.
     if(empty($uGender)){
-        $outputMessage .= "Please enter your gender.\n";
+        $outputMessage .= "Please enter your gender.<br>";
         $isValid = FALSE;
     }
     //Checks whether doctor email is invalid or empty.
     if($uEmail === FALSE) {
-        $outputMessage .= "Please enter a valid e-mail address.\n";
+        $outputMessage .= "Please enter a valid e-mail address.<br>";
         $isValid = FALSE;
     }
     //Checks whether the password is empty.
     if (empty($uPass)){
-        $outputMessage .= "Please enter a password.\n";
+        $outputMessage .= "Please enter a password.<br>";
         $isValid = FALSE;
     }
     //Checks the minimum length requirement of the password.
     if(strlen($uPass) < 8){
-        $outputMessage .= "Password must be at least 8 characters long.\n";
+        $outputMessage .= "Password must be at least 8 characters long.<br>";
         $isValid = FALSE;
     }
     //Checks whether password confirmation is empty.
     if (empty($uPassRep)){
-        $outputMessage .= "Please re-enter your password.\n";
+        $outputMessage .= "Please re-enter your password.<br>";
         $isValid = FALSE;
     }
     //Checks whether the password is same as confirmation.
     if ($uPassRep !== $uPass) {
-        $outputMessage .= "Passwords do not match. Please re-enter password.\n";
+        $outputMessage .= "Passwords do not match. Please re-enter password.<br>";
         $isValid = FALSE;
     }
     //Checks whether a specialization is selected.
     if(empty($uSpecialization) || $uSpecialization == FALSE){
-        $outputMessage .= "Please select your specializaion from the given list.\n";
+        $outputMessage .= "Please select your specializaion from the given list.<br>";
         $isValid = FALSE;
     }
 
@@ -70,7 +70,6 @@
 
     //if isValid is true, the values are inserted into the database.
     else{
-        $db_user_id = 2; //sets database user to 2(doctor).
         require('./database.php');
         $query = 'insert into doctors(doctor_name, doctor_gender, doctor_email, doctor_password, doctor_specialization_id) values (:d_name, :d_gender, :d_mail, :d_pass, :d_specialization_id);';
         $statement = $database->prepare($query);    //prepares query as a PDOStatement and passes to database server.
@@ -86,7 +85,7 @@
         try{
             $statement->execute();
         }catch(PDOException $e){
-            $outputMessage .= "The e-mail address you entered already exists. Try another one.\n";
+            $outputMessage .= "The e-mail address you entered already exists. Try another one.<br>";
             header("Location: ./signUpDoctors.php?outputMessage=$outputMessage");
             exit();
         }
