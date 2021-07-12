@@ -35,9 +35,7 @@
         $successMessage="";
     }
 
-    //Sets the database user to doctor(2).
     //Calls the database.php file. If an error occurs, script will terminates raising fatal error
-    $db_user_id = 2;
     require('./database.php');
 
     //Retrives the record of the user from the doctor table as an associative array
