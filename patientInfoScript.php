@@ -26,19 +26,19 @@
     // performs server side validation
     //if invalid isValid is set to false and error message is generated
     if (empty($uName)){
-        $outputMessage .= "Please enter your name.\n";
+        $outputMessage .= "Please enter your name.<br>";
         $isValid = FALSE;
     }
     if($uEmail === FALSE) {
-        $outputMessage .= "Please enter a valid e-mail address.\n";
+        $outputMessage .= "Please enter a valid e-mail address.<br>";
         $isValid = FALSE;
     }
     if(empty($uAddress1)){
-        $outputMessage .= "Please enter your first address-line.\n";
+        $outputMessage .= "Please enter your first address-line.<br>";
         $isValid = FALSE;
     }
     if(empty($uCity) || $uCity == FALSE){
-        $outputMessage .= "Please select a city from the given list.\n";
+        $outputMessage .= "Please select a city from the given list.<br>";
         $isValid = FALSE;
     }
 
@@ -50,8 +50,6 @@
 
     //if valid the user's record is updated with the input values 
     else{
-        //database user is set to patient(1)
-        $db_user_id = 1;
         require('./database.php');
 
         //update query is prepared and binded to values
@@ -72,14 +70,14 @@
         try{
             $statement->execute();
         }catch(PDOException $e){
-            $outputMessage .= "The e-mail address you entered already exists. Changes were rolled back.\n";
+            $outputMessage .= "The e-mail address you entered already exists. Changes were rolled back.<br>";
             header("Location: ./patientProfileSettings.php?outputMessage1=$outputMessage");
             exit();
         }
         $statement->closeCursor();
 
         //Generates success message and user is redirected to profile settings.
-        $successMessage = "Your personal information has been successfully updated. All information is up-to-date.\n";
+        $successMessage = "Your personal information has been successfully updated. All information is up-to-date.<br>";
         header("Location: ./patientProfileSettings.php?successMessage=$successMessage");
     }
 ?>
