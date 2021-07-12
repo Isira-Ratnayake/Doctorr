@@ -14,7 +14,6 @@
     }
 
 //retieves an associated array of specialization names and their ids to generate the specialization list. 
-    $db_user_id = 2;    //Sets the database user id to 2(doctor).
     require('./database.php');
     $query = 'select * from specialization;';
     $statement = $database->prepare($query);    //Query is prepared as a PDOStatement object and sent to database server.
