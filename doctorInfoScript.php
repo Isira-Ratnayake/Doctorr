@@ -26,25 +26,25 @@
     // performs server side validity
     //if invalid isValid is set to false and error message is generated
     if (empty($uName)){
-        $outputMessage .= "Please enter your name.\n";
+        $outputMessage .= "Please enter your name.<br>";
         $isValid = FALSE;
     }
     if($uEmail === FALSE) {
-        $outputMessage .= "Please enter a valid e-mail address.\n";
+        $outputMessage .= "Please enter a valid e-mail address.<br>";
         $isValid = FALSE;
     }
     if(empty($doctorSpec) || $doctorSpec == FALSE){
-        $outputMessage .= "Please select your specialization from the given list.\n";
+        $outputMessage .= "Please select your specialization from the given list.<br>";
         $isValid = FALSE;
     }
     //checks if small description is within the 300 word limit
     if(strlen($doctorSmallDesc) > 300){
-        $outputMessage .= "Too many characters in the search card description.\n";
+        $outputMessage .= "Too many characters in the search card description.<br>";
         $isValid = FALSE;
     }
     //checks if long description is within the 1000 word limit
     if(strlen($doctorLongDesc) > 1000){
-        $outputMessage .= "Too many characters in the Doctorr profile description.\n";
+        $outputMessage .= "Too many characters in the Doctorr profile description.<br>";
         $isValid = FALSE;
     }
     //if validity is false user is redirected to profile settings
@@ -54,8 +54,6 @@
     }
     //if valid the user's record is updated with the input values 
     else{
-        //database user is set to doctor(2)
-        $db_user_id = 2;
         require('./database.php');
 
         //update query is prepared and binded to values
@@ -76,14 +74,14 @@
         try{
             $statement->execute();
         }catch(PDOException $e){
-            $outputMessage .= "The e-mail address you entered already exists. Changes were rolled back.\n";
+            $outputMessage .= "The e-mail address you entered already exists. Changes were rolled back.<br>";
             header("Location: ./doctorProfileSettings.php?outputMessage=$outputMessage");
             exit();
         }
         $statement->closeCursor();
 
         //Generates success message and user is redirected to profile settings.
-        $successMessage = "Your personal information has been successfully updated. All information is up-to-date.\n";
+        $successMessage = "Your personal information has been successfully updated. All information is up-to-date.<br>";
         header("Location: ./doctorProfileSettings.php?successMessage=$successMessage");
     }
 ?>
