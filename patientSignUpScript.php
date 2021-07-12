@@ -24,39 +24,39 @@
         If invalid, an output message is generated and isValid is set to false.
     */
     if (empty($uName)){
-        $outputMessage .= "Please enter your name.\n";
+        $outputMessage .= "Please enter your name.<br>";
         $isValid = FALSE;
     }
     if(empty($uGender)){
-        $outputMessage .= "Please enter your gender.\n";
+        $outputMessage .= "Please enter your gender.<br>";
         $isValid = FALSE;
     }
     if($uEmail === FALSE) {
-        $outputMessage .= "Please enter a valid e-mail address.\n";
+        $outputMessage .= "Please enter a valid e-mail address.<br>";
         $isValid = FALSE;
     }
     if (empty($uPass)){
-        $outputMessage .= "Please enter a password.\n";
+        $outputMessage .= "Please enter a password.<br>";
         $isValid = FALSE;
     }
     if(strlen($uPass) < 8){
-        $outputMessage .= "Password must be at least 8 characters long.\n";
+        $outputMessage .= "Password must be at least 8 characters long.<br>";
         $isValid = FALSE;
     }
     if (empty($uPassRep)){
-        $outputMessage .= "Please re-enter your password.\n";
+        $outputMessage .= "Please re-enter your password.<br>";
         $isValid = FALSE;
     }
     if ($uPassRep !== $uPass) {
-        $outputMessage .= "Passwords do not match. Please re-enter password.\n";
+        $outputMessage .= "Passwords do not match. Please re-enter password.<br>";
         $isValid = FALSE;
     }
     if(empty($uAddress1)){
-        $outputMessage .= "Please enter your first address-line.\n";
+        $outputMessage .= "Please enter your first address-line.<br>";
         $isValid = FALSE;
     }
     if(empty($uCity) || $uCity == FALSE){
-        $outputMessage .= "Please select a city from the given list.\n";
+        $outputMessage .= "Please select a city from the given list.<br>";
         $isValid = FALSE;
     }
 
@@ -68,7 +68,6 @@
 
     //if isValid is true, the values are inserted into the database.
     else{
-        $db_user_id = 1;    //sets database user to 1(patient).
         require('./database.php');
 
         //Insert all values to patients table
@@ -90,7 +89,7 @@
         try{
             $statement->execute();
         }catch(PDOException $e){
-            $outputMessage .= "The e-mail address you entered already exists. Try another one.\n";
+            $outputMessage .= "The e-mail address you entered already exists. Try another one.<br>";
             header("Location: ./signUpPatients.php?outputMessage=$outputMessage");
             exit();
         }
