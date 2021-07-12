@@ -22,7 +22,7 @@
     //checks if $worktimeId is a valid integer
     //if not $isValid is set to false and error message is generated
     if(empty($worktimeId) || $worktimeId == FALSE){
-        $outputMessage .= "Invalid delete query. Please try again.\n";
+        $outputMessage .= "Invalid delete query. Please try again.<br>";
         $isValid = FALSE;
     }
 
@@ -34,8 +34,6 @@
 
     //if $isValid is true, worktime record is deleted
     else{
-        //sets database user to doctor(2)
-        $db_user_id = 2;
         require('./database.php');
 
         //delete specific worktime from workplace table
@@ -46,7 +44,7 @@
         $statement->closeCursor();
 
         ////geenrates success message and redirects user to profile settings
-        $successMessage = "Worktime record was successfully deleted. All information is up-to-date.\n";
+        $successMessage = "Worktime record was successfully deleted. All information is up-to-date.<br>";
         header("Location: ./doctorProfileSettings.php?successMessage=$successMessage");
     }
 ?>
