@@ -23,13 +23,11 @@
 
     //checks if password is empty. If so, sets $isValid to false and generates error message
     if (empty($uPassword)){
-        $outputMessage .= "Please enter your password.\n";
+        $outputMessage .= "Please enter your password.<br>";
         $isValid = FALSE;
     }
     //if $isValid is true checks if password is correct 
     if($isValid === True){
-        //sets database user to doctor(2)
-        $db_user_id = 2;
         require('./database.php');
 
         //retrieves password of user from database
@@ -43,7 +41,7 @@
         //checks whether entered password is same as actual password
         //if not error message is generated and $isValid is set to false
         if($uPassword !== $pass_result['doctor_password']){
-            $outputMessage .= "The password you entered is incorrect. Your account was not deleted.\n";
+            $outputMessage .= "The password you entered is incorrect. Your account was not deleted.<br>";
             $isValid = FALSE;
         }
     }
@@ -53,8 +51,6 @@
         exit();
     }
     else{
-        //database user is set to doctor(2)
-        $db_user_id = 2;
         require('./database.php');
 
         //deletes all records related to doctor from the database. (Deletion will cascade to child tables)
