@@ -24,8 +24,6 @@ if(empty($doctor_id) || $doctor_id == FALSE){
     exit();
 }
 
-//sets database user to patient(1)
-$db_user_id = 1;
 require('./database.php');
 
 //retrieves name of patient(user)
