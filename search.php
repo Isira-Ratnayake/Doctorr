@@ -15,8 +15,6 @@ if(!isset($_SESSION['patient_id'])){
         $patient_id = $_SESSION['patient_id'];
     }
 
-    //database user is set to patient
-    $db_user_id = 1;
     require('./database.php');
 
     //retrieves name of the user (patient)
