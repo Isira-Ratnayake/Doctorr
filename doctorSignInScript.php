@@ -16,11 +16,11 @@
 
     //Checks whether either the email or password is empty. If so isValid is set to false.
     if($uEmail == FALSE) {
-        $outputMessage .= "Please enter your e-mail address.\n";
+        $outputMessage .= "Please enter your e-mail address.<br>";
         $isValid = FALSE;
     }
     if (empty($uPass)){
-        $outputMessage .= "Please enter your password.\n";
+        $outputMessage .= "Please enter your password.<br>";
         $isValid = FALSE;
     }
 
@@ -33,7 +33,6 @@
     //otherwise interpreter moves to sign-in process.
     else{
         //retieves the doctor_id who's email and passwords matches the input values.
-        $db_user_id = 2;//Sets the database user to 2(doctor).
         require('./database.php');
         $query = 'select doctor_id from doctors where doctor_email=:d_mail and doctor_password=:d_pass';
         $statement = $database->prepare($query);
@@ -45,7 +44,7 @@
 
         //if the array is empty, generates an error message and redirects the user back to sign-in page.
         if($doctor_id_result === FALSE){
-            $outputMessage = "The account was not found. Please try a different e-mail or password.\n";
+            $outputMessage = "The account was not found. Please try a different e-mail or password.<br>";
             header("Location: ./signInDoctors.php?outputMessage=$outputMessage");
             exit();
         }
