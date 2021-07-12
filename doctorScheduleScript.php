@@ -28,19 +28,19 @@
 
     //performs server side validation
     if(empty($workplaceId) || $workplaceId == FALSE){
-        $outputMessage .= "Please select a workplace from the given list.\n";
+        $outputMessage .= "Please select a workplace from the given list.<br>";
         $isValid = FALSE;
     }
     if(empty($timeStart)){
-        $outputMessage .= "Please enter the time at which you start working.\n";
+        $outputMessage .= "Please enter the time at which you start working.<br>";
         $isValid = FALSE;
     }
     if(empty($timeEnd)){
-        $outputMessage .= "Please enter the time at which you end working.\n";
+        $outputMessage .= "Please enter the time at which you end working.<br>";
         $isValid = FALSE;
     }
     if(empty($workDayId) || $workDayId == FALSE){
-        $outputMessage .= "Please select the day of work from the given list.\n";
+        $outputMessage .= "Please select the day of work from the given list.<br>";
         $isValid = FALSE;
     }
     //if $isValid is false, user is redirected to profile settings
@@ -50,8 +50,6 @@
     }
     //otherwise, values are inserted to database
     else{
-        //sets database user as doctor(2).
-        $db_user_id = 2;
         require('./database.php');
 
         //values are inserted to worktime table of database
@@ -65,7 +63,7 @@
         $statement->closeCursor();
 
         //success message is generated and user is redirected to profile settings
-        $successMessage = "Your work schedule information was successfully added. All information is up-to-date.\n";
+        $successMessage = "Your work schedule information was successfully added. All information is up-to-date.<br>";
         header("Location: ./doctorProfileSettings.php?successMessage=$successMessage");
     }
 ?>
