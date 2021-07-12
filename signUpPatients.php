@@ -13,9 +13,7 @@
         $outputMessage="";
     }
 
-    //sets database user to patient(1)
-    //retirves all recors of city table as an associative array.
-    $db_user_id = 1;
+    //retrieves all recors of city table as an associative array.
     require('./database.php');  //Calls the database.php file. If an error occurs, script will terminates raising fatal error
     $query = 'select * from city;';
     $statement = $database->prepare($query);
