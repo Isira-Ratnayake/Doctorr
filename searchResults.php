@@ -19,8 +19,6 @@ if(!isset($_SESSION['patient_id'])){
     $search_spec_id = filter_input(INPUT_GET,'searchSpec',FILTER_VALIDATE_INT);
     $search_city_id = filter_input(INPUT_GET,'searchCity',FILTER_VALIDATE_INT);
 
-    //database user is set to patient
-    $db_user_id = 1;
     require('./database.php');
 
     /* 
