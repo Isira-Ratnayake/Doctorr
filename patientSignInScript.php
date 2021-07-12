@@ -16,11 +16,11 @@
 
     //Checks whether either the email or password is empty. If so isValid is set to false.
     if($uEmail == false) {
-        $outputMessage .= "Please enter your e-mail address.\n";
+        $outputMessage .= "Please enter your e-mail address.<br>";
         $isValid = FALSE;
     }
     if (empty($uPass)){
-        $outputMessage .= "Please enter your password.\n";
+        $outputMessage .= "Please enter your password.<br>";
         $isValid = FALSE;
     }
 
@@ -33,7 +33,6 @@
     //otherwise interpreter moves to sign-in process.
     else{
         //retieves the patient_id who's email and passwords matches the input values.
-        $db_user_id = 1;//Sets the database user to 1(patient).
         require('./database.php');
         $query = 'select patient_id from patients where patient_email=:p_mail and patient_password=:p_pass';
         $statement = $database->prepare($query);
@@ -45,7 +44,7 @@
 
         //if the array is empty, generates an error message and redirects the user back to sign-in page.
         if($patient_id_result === FALSE){
-            $outputMessage = "The account was not found. Please try a different e-mail or password.\n";
+            $outputMessage = "The account was not found. Please try a different e-mail or password.<br>";
             header("Location: ./signInPatients.php?outputMessage=$outputMessage");
             exit();
         }
