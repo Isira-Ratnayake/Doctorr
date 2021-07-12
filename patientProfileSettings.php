@@ -34,9 +34,7 @@ else{
     $successMessage="";
 }
 
-    //Sets the database user to patient(1).
     //Calls the database.php file. If an error occurs, script will terminates raising fatal error
-    $db_user_id = 1;
     require('./database.php');
 
     //Retrives all records from the city table as an associative array
