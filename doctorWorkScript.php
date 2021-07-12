@@ -28,15 +28,15 @@
 
     //Server side validation, checks where any variable is empty. Sets is valid to false if that is true and generates error message.
     if (empty($workplaceName)){
-        $outputMessage .= "Please enter the name of your workplace.\n";
+        $outputMessage .= "Please enter the name of your workplace.<br>";
         $isValid = FALSE;
     }
     if(empty($workplaceCity) || $workplaceCity == FALSE){
-        $outputMessage .= "Please select a city from the given list.\n";
+        $outputMessage .= "Please select a city from the given list.<br>";
         $isValid = FALSE;
     }
     if(empty($workplaceType) || $workplaceType == FALSE){
-        $outputMessage .= "Please select the type of workplace from the given list.\n";
+        $outputMessage .= "Please select the type of workplace from the given list.<br>";
         $isValid = FALSE;
     }
     //if isValid is false redirects user to profile settings with an error message.
@@ -46,8 +46,6 @@
     }
     //Inserts values to database of isValid is true
     else{
-        //sets database user to doctor(2)
-        $db_user_id = 2;
         require('./database.php');
 
         //insert values to workplace table into the database
@@ -63,7 +61,7 @@
         $statement->closeCursor();
 
         //redirects user to profile settings with message of success
-        $successMessage = "Your workplace information was successfully added. All information is up-to-date.\n";
+        $successMessage = "Your workplace information was successfully added. All information is up-to-date.<br>";
         header("Location: ./doctorProfileSettings.php?successMessage=$successMessage");
     }
 ?>
