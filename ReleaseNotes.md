@@ -2,7 +2,9 @@ Release Notes
 -----------------------------
 Doctorr - V1.0
 -----------------------------
-##Features
+
+Features
+-----------------------------
 - Patients and Doctors can create and manage their own accounts.
 - Creating, handling and customizing accounts is extremely simple.
 - Doctors can easily and clearly display their workplaces, work schedules and career descriptions.
