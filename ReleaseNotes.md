@@ -15,7 +15,7 @@ Important
 **doctorrdb.sql database file must be imported to mysql/mariadb server before hosting the website.**<br/>
 (We have used the default username and password set by the database server)<br/>
 **Username:** root<br/>
-**Password:** (none)<br/>
+**Password:** (none)<br/><br/>
 For testing purposes we have included several test accounts. They can be accessed using following e-mails and passwords.
 
 Doctor Accounts
